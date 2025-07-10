@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>program4</h1>
+
+    <button onclick="updateDiv()">update div</button>
+    <div id="root"></div>
+
+    <script>
+      const products = [
+        { id: 1, name: 'Product 1', price: 100 },
+        { id: 2, name: 'Product 2', price: 200 },
+        { id: 3, name: 'Product 3', price: 300 },
+        { id: 4, name: 'Product 4', price: 400 },
+        { id: 5, name: 'Product 5', price: 500 },
+        { id: 6, name: 'Product 6', price: 600 },
+      ]
+
+      function updateDiv() {
+        // create table header
+        const tableHeader = `
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+        `
+
+        // create body rows
+        let rows = ''
+        for (const product of products) {
+          rows += `
+                <tr>
+                    <td>${product['id']}</td>
+                    <td>${product['name']}</td>
+                    <td>${product['price']}</td>
+                </tr>
+            `
+        }
+
+        // create table body
+        const tableBody = `
+            <tbody>${rows}</tbody>
+        `
+
+        // crete a table
+        const table = `<table border="1">
+            ${tableHeader}
+            ${tableBody}
+        <table>`
+
+        // get the object of div
+        const root = document.getElementById('root')
+
+        // render the table into the div
+        root.innerHTML = table
+      }
+    </script>
+  </body>
+</html>

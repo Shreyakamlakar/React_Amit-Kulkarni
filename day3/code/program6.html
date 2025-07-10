@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <style>
+      .react-element {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+      }
+    </style>
+  </head>
+  <body onload="render()">
+    <h1>Program6</h1>
+    <div id="root"></div>
+
+    <script>
+      function render() {
+        // get the root div object
+        const root = document.getElementById('root')
+
+        // create react element
+        const h2 = React.createElement(
+          'h2',
+          {
+            className: 'react-element',
+          },
+          'welcome to react'
+        )
+
+        const div = React.createElement(
+          'div',
+          {},
+          'react is faster than angular'
+        )
+
+        // render the react element
+        ReactDOM.render(div, root)
+      }
+    </script>
+  </body>
+</html>

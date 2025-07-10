@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body onload="render()">
+    <h1>Program7</h1>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function render() {
+        // get root object
+        const root = document.getElementById('root')
+
+        // create h2 element
+        // babel converts the line to React.createElement()
+        const h2 = <h2>welcome to react</h2>
+
+        // render the h2 element
+        ReactDOM.render(h2, root)
+      }
+    </script>
+  </body>
+</html>

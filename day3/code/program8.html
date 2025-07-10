@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .react-element {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+      }
+    </style>
+  </head>
+  <body onload="render()">
+    <h1>Program8</h1>
+    <h2>rendering scalar values</h2>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function render() {
+        // scalar values
+        const firstName = 'john'
+        const lastName = 'doe'
+        const age = 40
+        const email = 'john@test.com'
+
+        // get the root object
+        const root = document.getElementById('root')
+
+        // create react element
+        // const divFirstName = <div>first name: {firstName}</div>
+        // const divLastName = <div>last name: {lastName}</div>
+        const div = (
+          <div className='react-element'>
+            <div>first name: {firstName}</div>
+            <div>last name: {lastName}</div>
+            <div>email: {email}</div>
+            <div>age: {age}</div>
+          </div>
+        )
+
+        // render the element
+        ReactDOM.render(div, root)
+      }
+    </script>
+  </body>
+</html>

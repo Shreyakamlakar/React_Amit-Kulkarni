@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body onload="render()">
+    <h1>program5</h1>
+    <div id="root"></div>
+
+    <script>
+      function render() {
+        // get the object of div having id as root
+        // this object is crated by the rendering engine
+        const root = document.getElementById('root')
+        console.log(root)
+
+        // console.log(React)
+
+        // create a react element
+        // param1: type of element
+        // param2: properties of the elements
+        // param3: children or the content(s) of the element
+        const h2 = React.createElement('h2', {}, 'welcome to react')
+        console.log(h2)
+
+        // render the react element
+        // console.log(ReactDOM)
+        ReactDOM.render(h2, root)
+      }
+    </script>
+  </body>
+</html>

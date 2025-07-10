@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .product {
+        border: solid gray;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 1px gray;
+        padding: 10px;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body onload="render()">
+    <h1>Program10</h1>
+    <h2>rendering array of objects</h2>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function render() {
+        // array of objects
+        const products = [
+          { id: 1, name: 'Product 1', price: 100 },
+          { id: 2, name: 'Product 2', price: 200 },
+          { id: 3, name: 'Product 3', price: 300 },
+          { id: 4, name: 'Product 4', price: 400 },
+          { id: 5, name: 'Product 5', price: 500 },
+          { id: 6, name: 'Product 6', price: 600 },
+        ]
+
+        // get the root object
+        const root = document.getElementById('root')
+
+        // create react element
+        const div = (
+          <div>
+            {products.map((product) => {
+              const { id, name, price } = product
+
+              return (
+                <div className='product'>
+                  <div>id = {id}</div>
+                  <div>name = {name}</div>
+                  <div>price = {price}</div>
+                </div>
+              )
+            })}
+          </div>
+        )
+
+        // render the element
+        ReactDOM.render(div, root)
+      }
+    </script>
+  </body>
+</html>
