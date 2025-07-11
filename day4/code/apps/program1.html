@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body onload="render()">
+    <h1>Program1</h1>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function function1() {
+        return <h1>function1</h1>
+      }
+
+      // Person component
+      function Person() {
+        // person data
+        const person = {
+          name: 'person1',
+          address: 'pune',
+          age: 30,
+        }
+
+        return (
+          <div>
+            <h3>Person</h3>
+            <div>name: {person.name}</div>
+            <div>age: {person.age}</div>
+            <div>address: {person.address}</div>
+          </div>
+        )
+      }
+
+      // Car Component
+      function Car() {
+        // car data
+        const car = {
+          model: 'triber',
+          company: 'renault',
+          price: '10L',
+        }
+
+        return (
+          <div>
+            <h3>Car</h3>
+            <div>model: {car.model}</div>
+            <div>company: {car.company}</div>
+            <div>price: {car.price}</div>
+          </div>
+        )
+      }
+
+      function render() {
+        // get the root element
+        const root = document.getElementById('root')
+
+        // create the element
+        const div = (
+          <div>
+            {/* Person() */}
+            <Person />
+
+            {/* Car() */}
+            <Car />
+          </div>
+        )
+
+        // render h2 in the root element
+        ReactDOM.render(div, root)
+      }
+    </script>
+  </body>
+</html>
