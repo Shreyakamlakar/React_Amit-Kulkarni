@@ -1,0 +1,23 @@
+.item {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.item .title {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item .details {
+  font-weight: 500;
+}
+
+.item .delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
