@@ -1,0 +1,18 @@
+.thumbnail {
+  height: 200px;
+  cursor: pointer;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  min-height: 400px;
+}
